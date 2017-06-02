@@ -233,6 +233,10 @@ define([
             data.unblockCode = options.unblockCode;
           }
 
+          if (options.originalLoginEmail) {
+            data.originalLoginEmail = options.originalLoginEmail;
+          }
+
           return self.request.send(endpoint, 'POST', null, data)
             .then(
               function(accountData) {
